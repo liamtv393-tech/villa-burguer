@@ -1,156 +1,222 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tacos Don Toño – Auténtico Sabor</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Villa Burguer</title>
 
-<style>
-body {
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-  background: #000;
-  color: #fff;
-}
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: #fff;
+        }
 
-/* HERO */
-.hero {
-  height: 100vh;
-  background: url('https://images.unsplash.com/photo-1604908177522-4327f5a1f8b3?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  padding: 0 20px;
-}
-.hero h1 {
-  font-size: 55px;
-  font-weight: 700;
-  text-shadow: 0 5px 25px #000;
-}
-.hero p {
-  font-size: 22px;
-  margin-top: -10px;
-}
-.btn {
-  margin-top: 25px;
-  padding: 15px 35px;
-  border: 2px solid #d4af37;
-  color: #d4af37;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
-}
-.btn:hover {
-  background: #d4af37;
-  color: #000;
-}
+        header {
+            background: #000;
+            padding: 15px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
 
-/* SECCIÓN MENÚ */
-.section {
-  max-width: 1100px;
-  margin: 80px auto;
-  padding: 0 20px;
-}
-.section h2 {
-  font-size: 40px;
-  text-align: center;
-  margin-bottom: 50px;
-}
+        header h1 {
+            margin: 0;
+            color: #e63946;
+        }
 
-/* Cards */
-.menu-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-}
-.card {
-  background: #111;
-  border-radius: 12px;
-  overflow: hidden;
-  transition: 0.3s;
-  cursor: pointer;
-  border: 1px solid #222;
-}
-.card:hover {
-  transform: scale(1.03);
-  border-color: #d4af37;
-}
-.card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-.card-content {
-  padding: 20px;
-}
-.card-content h3 {
-  font-size: 24px;
-  margin: 0;
-}
-.card-content p {
-  font-size: 14px;
-  opacity: 0.8;
-}
+        nav a {
+            margin: 0 10px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-/* FOOTER */
-footer {
-  margin-top: 80px;
-  background: #111;
-  padding: 40px;
-  text-align: center;
-  border-top: 1px solid #222;
-}
-footer p {
-  font-size: 14px;
-  opacity: 0.6;
-}
-</style>
+        .hero {
+            background: url('https://images.unsplash.com/photo-1550547660-d9450f859349?w=1600') center/cover no-repeat;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero h2 {
+            font-size: 2.3rem;
+            background: rgba(0,0,0,0.6);
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+
+        .btn {
+            background: #e63946;
+            padding: 12px 20px;
+            margin-top: 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        h2.section-title {
+            margin-bottom: 20px;
+            color: #e63946;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .item {
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .item img {
+            width: 100%;
+            border-radius: 8px;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            text-align: center;
+            background: #000;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        /* WhatsApp button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #25d366;
+            color: #fff;
+            padding: 15px;
+            border-radius: 50%;
+            font-size: 24px;
+            text-decoration: none;
+        }
+    </style>
 </head>
+
 <body>
 
-<!-- HERO -->
-<section class="hero">
-  <h1>Auténtico Sabor Mexicano</h1>
-  <p>Los mejores tacos, preparados al momento.</p>
-  <a class="btn" href="#menu">Ver Menú</a>
+<header>
+    <h1>Villa Burguer</h1>
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#menu">Menú</a>
+        <a href="#promos">Promos</a>
+        <a href="#galeria">Galería</a>
+        <a href="#ubicacion">Ubicación</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+</header>
+
+<div id="inicio" class="hero">
+    <h2>Las mejores hamburguesas artesanales de Villa de Pozos</h2>
+    <a href="https://wa.me/52" class="btn">Ordenar por WhatsApp</a>
+</div>
+
+<section id="sobre">
+    <h2 class="section-title">Sobre Nosotros</h2>
+    <p>
+        En Villa Burguer preparamos hamburguesas artesanales con ingredientes frescos, carne de calidad
+        y recetas únicas. Somos un negocio local con ambiente cómodo estilo rústico-industrial,
+        ideal para familias, amigos y todo amante de una buena hamburguesa.
+    </p>
 </section>
 
-<!-- MENÚ -->
-<section class="section" id="menu">
-  <h2>Nuestro Menú</h2>
+<section id="menu">
+    <h2 class="section-title">Menú</h2>
+    <div class="menu-grid">
 
-  <div class="menu-grid">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1625944521711-68bc35cdbd22?auto=format&fit=crop&w=900&q=80">
-      <div class="card-content">
-        <h3>Tacos de Asada</h3>
-        <p>Carne suave, fresca y llena de sabor.</p>
-      </div>
-    </div>
+        <div class="item">
+            <img src="https://images.unsplash.com/photo-1606756790138-291a9a0d4636?w=800">
+            <h3>Hamburguesa Clásica</h3>
+            <p>Carne 100% res, queso, lechuga, tomate y aderezo casero.</p>
+        </div>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1601924582971-eabaf397c39e?auto=format&fit=crop&w=900&q=80">
-      <div class="card-content">
-        <h3>Tacos al Pastor</h3>
-        <p>Piña, marinado perfecto y tradición mexicana.</p>
-      </div>
-    </div>
+        <div class="item">
+            <img src="https://images.unsplash.com/photo-1550317138-10000687a72b?w=800">
+            <h3>Villa Especial</h3>
+            <p>Doble carne, queso cheddar, tocino y salsa especial.</p>
+        </div>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1630431345650-b1d639a1a39e?auto=format&fit=crop&w=900&q=80">
-      <div class="card-content">
-        <h3>Quesabirria</h3>
-        <p>Derretido, jugoso y crujiente. Una bomba de sabor.</p>
-      </div>
+        <div class="item">
+            <img src="https://images.unsplash.com/photo-1546069901-eacef0df6022?w=800">
+            <h3>BBQ Smash</h3>
+            <p>Cebolla caramelizada, salsa BBQ y queso derretido.</p>
+        </div>
+
+        <div class="item">
+            <img src="https://images.unsplash.com/photo-1585238342028-5503980c3fdf?w=800">
+            <h3>Papas Gajo</h3>
+            <p>Crujientes, sazonadas y servidas con aderezo.</p>
+        </div>
+
     </div>
-  </div>
 </section>
 
-<!-- FOOTER -->
+<section id="promos">
+    <h2 class="section-title">Promociones</h2>
+    <p>Consulta nuestras promos especiales, combos y ofertas por temporada.</p>
+</section>
+
+<section id="galeria">
+    <h2 class="section-title">Galería</h2>
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1551782450-17144efb9c50?w=1200">
+        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=1200">
+        <img src="https://images.unsplash.com/photo-1550547660-8d2cdcdc4e0a?w=1200">
+    </div>
+</section>
+
+<section id="ubicacion">
+    <h2 class="section-title">Ubicación</h2>
+    <p>Villa de Pozos, San Luis Potosí</p>
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.590732345659!2d-100.95!3d22.15"
+        width="100%" height="300" style="border:0;" loading="lazy">
+    </iframe>
+</section>
+
+<section id="contacto">
+    <h2 class="section-title">Contacto</h2>
+    <p>WhatsApp: 444-000-0000</p>
+    <p>Facebook e Instagram: @VillaBurguer</p>
+</section>
+
 <footer>
-  <p>© 2026 Tacos Don Toño – Todos los derechos reservados.</p>
+    © 2026 Villa Burguer — Todos los derechos reservados.
 </footer>
+
+<!-- Botón flotante WhatsApp -->
+<a class="whatsapp-btn" href="https://wa.me/52">💬</a>
 
 </body>
 </html>
